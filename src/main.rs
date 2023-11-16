@@ -31,7 +31,7 @@ enum Tokens{
 //////////////////////////////////////////////////////////////////////
 
 
-fn lexer(source: String){
+fn lexer(source: String) -> Vec<Tokens>{
     // println!("{}", string);
     let mut token: Vec<Tokens> = Vec::new();
     for c in source.chars(){
@@ -42,15 +42,9 @@ fn lexer(source: String){
             token.push(Tokens::PLUS);
         }
 
-
-
-
-
-
     }
     // println!("{:?}", token);
-    println!("{:?}", token);
-
+    return token;
 }
 
 
@@ -65,7 +59,7 @@ fn main(){
         let _ = stdin().read_line(&mut input);
         let input = input.trim().to_string();
         // Todo: Implement a Lexer which will scan and tokenize the input string.
-        lexer(input);
+        println!("{:?}", lexer(input));
     }
 }
 
