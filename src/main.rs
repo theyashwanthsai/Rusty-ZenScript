@@ -41,6 +41,15 @@ fn lexer(source: String) -> Vec<Tokens>{
         if c == '+'{
             token.push(Tokens::PLUS);
         }
+        if c == '-'{
+            token.push(Tokens::MINUS);
+        }
+        if c == '*'{
+            token.push(Tokens::MUL);
+        }
+        if c == '/'{
+            token.push(Tokens::DIV);
+        }
 
     }
     // println!("{:?}", token);
